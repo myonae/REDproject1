@@ -49,17 +49,25 @@ function toTop(elementId) {
     }
     window.scroll(0, marginY);
 }
-var validation = document.getElementById('button');
+var validation = document.getElementById('button_send');
 var email = document.getElementById('email');
 var email_missing = document.getElementById('email_missing');
+var expression = /^(([^<>()[]\.,;:s@]+(.[^<>()[]\.,;:s@]+)*)|(.+))@(([[0-9]{1,3}.[0-9]{1,3}])|(([a-zA-Z-9]+.)+[a-zA-Z]{2,}))$/;
 
-validation.addEventListener('Click', f - valid);
+
 
 function f_valid(e) {
     if (email.validity.valueMissing) {
         e.preventDefault();
         email_missing.textContext = 'Please leave your Email';
         email_missing.style.color = 'red';
+
+    } else if (expression.test(email.value) == false) {
+        event.preventDefault();
+        email_missing.textContent = 'invalid email';
+        email_missing.style.color = 'orange';
+
+    } else {
 
     }
 }
