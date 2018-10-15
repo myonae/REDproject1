@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Aloha-Project1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.pkgd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/style.css" />
+    <script src="javascript/main.js"></script>
+
+</head>
+
+<body>
+    <header class="wrapper header">
+        <div class="left-header">
+            <img src="images/aloha-logo.svg" alt="brand name">
+        </div>
+        <nav class="right-header">
+            <ul>
+                <li><a onclick="initScroll('about'), toTop('about'); return true;" href="#">about</a></li>
+                <li><a onclick="initScroll('shop'),toTop('shop'); return true;" href="#">shop</a></li>
+                <li><a onclick="initScroll('featured'),toTop('featured'); return true;" href="#">featured</a></li>
+                <li><a onclick="initScroll('updates'),toTop('updates'); return  true;" href="#">updates</a></li>
+
+            </ul>
+        </nav>
+        <div class="shopping-cart">
+            <div id="upDate">0</div>
+            <img src="images/cart-icon.svg" alt="shopping cart">
+        </div>
+    </header>
+    <section class="wrapper section1">
+        <div class="first-image">
+            <div class="opacite"></div>
+            <img src="images/banner-girl.png" alt="girl with a banner">
+            <h3>new collection</h3>
+            <h1>spring/Summer 2016</h1>
+        </div>
+        <div class="down-section1" id="about">
+            <h1><em>hand-crafted</em>Styles</h1>
+            <p>Aloha Apparel Co. sells only teh finest ready-to-travel clothing Browse our current selection of products or sign-up for updates below</p>
+        </div>
+    </section>
+    <section class="wrapper section2" id="featured">
+        <div class="left-section2">
+            <div class="opacite"></div>
+            <img src="images/mens-category.jpg" alt="men's short">
+            <h2>men's</h2>
+        </div>
+        <div class="picture1-right">
+            <div class="opacite"></div>
+            <img src="images/trends-category.jpg" alt="trend">
+            <h2>trends</h2>
+        </div>
+        <div class="picture2-right">
+            <div class="opacite"></div>
+            <img src="images/glasses-category.jpg" alt="glasses">
+            <h2>glasses</h2>
+        </div>
+        <div class="picture3-left">
+            <div class="opacite"></div>
+            <img src="images/sale-category.jpg" alt="sale">
+            <h2>sale</h2>
+        </div>
+        <div class="picture4-left">
+            <div class="opacite"></div>
+            <img src="images/bags-category.jpg" alt="bags">
+            <h2>bags</h2>
+        </div>
+        <div class="left-section3">
+            <div class="opacite"></div>
+            <img src="images/womens-category.jpg" alt="womens">
+            <h2>women's</h2>
+        </div>
+    </section>
+    <section class="wrapper section4 " id="shop">
+        <h1><em>most-loved</em>Products</h1>
+        <div class="figures main-carousel">
+            <div class="carousel-cell number1">
+                <figure>
+                    <img src="images/stretch-knit-dress.jpg " alt="stretch-knit-dress " />
+                    <figcaption>
+                        <h4>dresses</h4>
+                        <h3>stretch knit dress</h3>
+                        <h4>$169.00</h4>
+                        <button class="add-button" onclick="increment()">add to Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="carousel-cell number2">
+                <figure>
+                    <img src="images/cotton-blue-shirt.jpg " alt="cotton-blue-shirt " />
+                    <figcaption>
+                        <h4>shirts</h4>
+                        <h3>stretch knit dress</h3>
+                        <h4>$89.00</h4>
+                        <button class="add-button" onclick="increment()">add to Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="carousel-cell number3">
+                <figure>
+                    <img src="images/checked-stretch-dress.jpg " data-flickity-lazyload="images/checked-stretch-dress.jpg" alt="strech-dress " />
+                    <figcaption>
+                        <h4>dresses</h4>
+                        <h3>checked strech dress</h3>
+                        <h4>$129.00</h4>
+                        <button class="add-button" onclick="increment()">add to cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="carousel-cell number4">
+                <figure>
+                    <img src="images/blue-hipster-backpack.jpg " data-flickity-lazyload="images/blue-hipster-backpack.jpg" alt="blue-hiptser-bag " />
+                    <figcaption>
+                        <h4>bags</h4>
+                        <h3>blue hipster backpack</h3>
+                        <h4>$69.00</h4>
+                        <button class="add-button" onclick="increment()">add to Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="carousel-cell number5">
+                <figure>
+                    <img src="images/demin-overall-shorts.jpg " data-flickity-lazyload="images/demin-overall-shorts.jpg" alt="demin-overall-shorts " />
+                    <figcaption>
+                        <h4>demin</h4>
+                        <h3>demin overall shorts</h3>
+                        <h4>$89.00</h4>
+                        <button class="add-button" onclick="increment()">add to Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="carousel-cell number6">
+                <figure>
+                    <img src="images/pink-dotted-dress.jpg " data-flickity-lazyload="images/pink-dotted-dress.jpg" alt="pink-dotted-dress " />
+                    <figcaption>
+                        <h4>dresses</h4>
+                        <h3>pink dotted dress</h3>
+                        <h4>$99.00</h4>
+                        <button class="add-button" onclick="onClick('update'); increment('update')">add to Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="carousel-cell number6">
+                <figure>
+                    <img src="images/blue-silk-dress.jpg " data-flickity-lazyload="images/blue-silk-dress.jpg" alt="blue-silk-dress" />
+                    <figcaption>
+                        <h4>dresses</h4>
+                        <h3>blue silk dree</h3>
+                        <h4>$89.00</h4>
+                        <button class="add-button" onclick="onClick('update'); increment('update')">add to Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="carousel-cell number7">
+                <figure>
+                    <img src="images/cotton-yellow-tshirt.jpg " data-flickity-lazyload="images/cotton-yellow-tshirt.jpg" alt="cotton-yellow-tshirt " />
+                    <figcaption>
+                        <h4>shirts</h4>
+                        <h3>cotton yellow tshirts</h3>
+                        <h4>$99.00</h4>
+                        <button class="add-button" onclick="onClick('update'); increment('update')">add to Cart</button>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper section5" id="updates">
+        <h1><em>sign-up for</em>Updates</h1>
+        <p>Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style tips from our blog. Upcoming sales, and get free style tips from our blog. Unsubscribe at any time</p>
+        <form class="contact-form" action="submit.php" method="post" required="required">
+            <label for="email" class="visuallyhidden">email</label><br>
+            <input class="email " id="email " type="text" name="email" value="E-mail"><br>
+            <input class="button" id="button" type="submit" value="Subscribe">
+            <span id="email_missing"></span>
+        </form>
+    </section>
+    <footer class="footer wrapper ">
+        <div class="left-footer ">
+            <div class="icons-and-name ">
+                <i class="far fa-copyright ">
+                    <p>2016 Aloha Apparel Co.</p>
+                </i>
+            </div>
+            <p>Powered by HTML and CSS</p>
+            <p class="p-footer ">604-604-6040.<a href="olfa.maslah@gmail.com">info@alohaapparel</a></p>
+            <div class="adress ">
+                <p>1490 W Broadway</p>
+                <p>Vacouver, BC, Canada</p>
+            </div>
+        </div>
+        <div class="right-footer">
+            <nav>
+                <ul class="icon-list">
+                    <li>
+                        <i class="fab fa-facebook-f"></i>
+                    </li>
+                    <li>
+                        <i class="fab fa-twitter"></i>
+                    </li>
+                    <li>
+                        <i class="fab fa-instagram"></i>
+                    </li>
+                    <li>
+                        <i class="fab fa-pinterest"></i>
+                    </li>
+                    <li>
+                        <i class="fab fa-google-plus-g"></i>
+                    </li>
+                </ul>
+                <ul class="social-link">
+                    <li><a href="facebook">facebook</a></li>
+                    <li><a href="twitter">twitter</a></li>
+                    <li><a href="instagram">instagram</a></li>
+                    <li><a href="pinterest">pinterest</a></li>
+                    <li><a href="google+">Google+</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
